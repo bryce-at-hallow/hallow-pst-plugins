@@ -132,6 +132,9 @@ This is a Hallow Parish Roadmap Meeting. Extract:
 11. Parish action item due dates — for each action item assigned to the parish, was a
     specific deadline mentioned? If so, record it. If not, note that a standard timeline
     will be applied.
+
+**Important:** For any field not explicitly mentioned on the call, return `null`. Do not infer,
+estimate, or guess values — especially for dates, feature names, and contact details.
 ```
 
 ---
@@ -355,7 +358,7 @@ was established.
 
 These tasks are in addition to Tasks 1–5 in Step 6. Create them without asking for confirmation
 (`confirmationStatus: CONFIRMATION_WAIVED_FOR_SESSION`). Associate all of them with the **deal**
-only (deal ID from Step 0). Use `hubspot_owner_id: 83821452` on all.
+only (deal ID from Step 0). Use the acting lead's `hubspot_owner_id` (from their identity skill) on all.
 
 For each task, set `hs_timestamp` to the feature's scheduled date **minus 14 days** (two weeks
 out gives Bryce prep time). If the scheduled date is less than 14 days away or has already
@@ -503,7 +506,7 @@ Do not skip this output step or proceed past it until all timestamps are verifie
 | `hs_task_type` | `EMAIL`, `CALL`, or `TODO` — match to the action |
 | `hs_timestamp` | If a specific due date was mentioned on the call for this task, use that date. Otherwise: **CALL_DATE + 7 days** (one week after the call). |
 | `hs_task_status` | `NOT_STARTED` |
-| `hubspot_owner_id` | `83821452` |
+| `hubspot_owner_id` | Acting lead's owner ID (from their identity skill) |
 | `hs_task_priority` | `HIGH` for meeting-related items, `MEDIUM` for resource sends |
 | `hs_task_body` | 1–2 sentences: what this is, why it matters, what "done" looks like. If a Drive resource was matched for this task, include the URL in the body so it's available in HubSpot without reopening the email. |
 
@@ -515,7 +518,7 @@ Do not skip this output step or proceed past it until all timestamps are verifie
 | `hs_task_type` | `EMAIL` |
 | `hs_timestamp` | **CALL_DATE + 14 days** (two weeks after the call) |
 | `hs_task_status` | `NOT_STARTED` |
-| `hubspot_owner_id` | `83821452` |
+| `hubspot_owner_id` | Acting lead's owner ID (from their identity skill) |
 | `hs_task_priority` | `HIGH` |
 | `hs_task_body` | A ready-to-send check-in email drafted in Bryce's voice (see below). |
 
@@ -529,7 +532,7 @@ Draft the email using the same voice as Step 3: warm, direct, no em-dashes. The 
 
 ```
 To: [parish POC email addresses from Step 1, comma-separated]
-CC: [Hallow attendees from Step 1 excluding bryce@hallow.app, or omit if none]
+CC: [Hallow attendees from Step 1 excluding the acting lead's email, or omit if none]
 Subject: Checking In — [Parish Name] Action Items
 
 Hey Team,
@@ -555,7 +558,7 @@ inline (matching the example above), not "Due:" on a separate line.
 | `hs_task_type` | `EMAIL` |
 | `hs_timestamp` | **CALL_DATE + 21 days** (three weeks after the call) |
 | `hs_task_status` | `NOT_STARTED` |
-| `hubspot_owner_id` | `83821452` |
+| `hubspot_owner_id` | Acting lead's owner ID (from their identity skill) |
 | `hs_task_priority` | `MEDIUM` |
 | `hs_task_body` | `Three weeks post-roadmap — time to send a warm, delightful check-in to [Parish Name]. Celebrate any wins, acknowledge progress on their action items, and keep the momentum going. This is a relationship touch, not a task follow-up.` |
 

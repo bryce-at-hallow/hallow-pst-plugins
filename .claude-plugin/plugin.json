@@ -1,8 +1,19 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "hallow-pst-plugin",
-  "description": "A plugin for Parish Success Leads",
-  "version": "1.0.0",
+  "description": "Skills for the Hallow Parish Success team — HubSpot CRM automation, post-roadmap meeting follow-ups, prayer challenge slot management, and partner drive file reference.",
   "author": {
-    "name": "Bryce McWhirter"
-  }
+    "name": "Bryce McWhirter",
+    "email": "bryce@hallow.app"
+  },
+  "homepage": "https://github.com/hallow-inc/claude-plugins",
+  "repository": "https://github.com/hallow-inc/claude-plugins",
+  "license": "LicenseRef-Hallow-Internal",
+  "keywords": [
+    "hubspot",
+    "parish-success",
+    "crm",
+    "hallow",
+    "sales"
+  ]
 }
