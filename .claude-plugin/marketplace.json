@@ -1,0 +1,37 @@
+{
+  "name": "hallow-pst-plugin",
+  "display_name": "Hallow Parish Success",
+  "description": "Skills for the Hallow Parish Success team — HubSpot CRM automation, post-roadmap follow-ups, prayer challenge management, and partner drive access.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bryce McWhirter",
+    "email": "bryce@hallow.app"
+  },
+  "categories": ["crm", "productivity", "sales"],
+  "skills": [
+    {
+      "name": "post-roadmap",
+      "display_name": "Post-Roadmap Follow-Up",
+      "description": "Drafts a follow-up email after a parish roadmap meeting, creates HubSpot tasks and notes on the affiliated deal.",
+      "user_invocable": true
+    },
+    {
+      "name": "sort-prayer-challenges",
+      "display_name": "Sort Prayer Challenges",
+      "description": "Reorders a HubSpot parish deal's 8 prayer challenge slots into chronological order by launch date.",
+      "user_invocable": true
+    },
+    {
+      "name": "partner-drive",
+      "display_name": "Partner Drive",
+      "description": "Reference catalogue of Hallow Parish Partner Drive files — Google Drive links for Partner Manual, templates, Herald resources, and more.",
+      "user_invocable": true
+    },
+    {
+      "name": "ps-pipeline",
+      "display_name": "PS Pipeline Reference",
+      "description": "HubSpot standards and process reference for the Parish Success team — pipeline/stage IDs, task rules, note conventions, overdue definition.",
+      "user_invocable": false
+    }
+  ]
+}
