@@ -1,0 +1,8 @@
+{
+  "name": "hallow-pst-plugin",
+  "description": "A plugin for Parish Success Leads",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bryce McWhirter"
+  }
+}
